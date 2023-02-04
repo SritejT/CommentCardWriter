@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var comment = Comment()
+    @State private var textFieldOpacity = 0.0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .center, spacing: 20) {
+            TextField(
+                "Comment for subject:",
+                text: $comment.text
+            ).opacity(textFieldOpacity)
+            
+            Button(
+                "Generate Comment",
+                action: {
+                    comment.generateRandomComment()
+                    textFieldOpacity = 1
+                }
+            )
+        }
     }
 }
 

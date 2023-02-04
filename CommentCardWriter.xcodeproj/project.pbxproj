@@ -14,6 +14,7 @@
 		2B17348B298E6F6D0032F441 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B17348A298E6F6D0032F441 /* CommentCardWriterTests.swift */; };
 		2B173495298E6F6D0032F441 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B173494298E6F6D0032F441 /* CommentCardWriterUITests.swift */; };
 		2B173497298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B173496298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift */; };
+		2B1734A5298E71770032F441 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1734A4298E71770032F441 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2B173490298E6F6D0032F441 /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B173494298E6F6D0032F441 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		2B173496298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B1734A4298E71770032F441 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		2B17346D298E6F6C0032F441 = {
 			isa = PBXGroup;
 			children = (
+				2B1734A3298E715F0032F441 /* Models */,
 				2B173478298E6F6C0032F441 /* CommentCardWriter */,
 				2B173489298E6F6D0032F441 /* CommentCardWriterTests */,
 				2B173493298E6F6D0032F441 /* CommentCardWriterUITests */,
@@ -125,6 +128,14 @@
 				2B173496298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift */,
 			);
 			path = CommentCardWriterUITests;
+			sourceTree = "<group>";
+		};
+		2B1734A3298E715F0032F441 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B1734A4298E71770032F441 /* Comment.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B17347C298E6F6C0032F441 /* ContentView.swift in Sources */,
+				2B1734A5298E71770032F441 /* Comment.swift in Sources */,
 				2B17347A298E6F6C0032F441 /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
