@@ -18,13 +18,16 @@ struct ContentView: View {
     var body: some View {
         
         VStack(alignment: .center, spacing: 20) {
-            VStack {
-                Image(systemName: "pencil.circle.fill")
-                Text("Editing...")
-            }.disabled(editing)
-            VStack {
-                Image(systemName: "checkmark.seal.fill")
-                Text("Saved!")
+            if editing {
+                VStack {
+                    Image(systemName: "pencil.circle.fill")
+                    Text("Editing...")
+                }
+            } else {
+                VStack {
+                    Image(systemName: "checkmark.seal.fill")
+                    Text("Saved!")
+                }
             }
             HStack {
                 Text("Subject: ")
@@ -80,9 +83,12 @@ struct ContentView: View {
                 )
             }
             
-            Text(comment.text)
-                .padding()
-                .border(.primary)
+            TextField(
+                    "Create your comment!",
+                    text: $comment.text)
+                    .border(.primary)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
             
             Divider()
             
