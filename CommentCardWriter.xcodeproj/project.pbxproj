@@ -15,6 +15,7 @@
 		2B173495298E6F6D0032F441 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B173494298E6F6D0032F441 /* CommentCardWriterUITests.swift */; };
 		2B173497298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B173496298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift */; };
 		2B1734A5298E71770032F441 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1734A4298E71770032F441 /* Comment.swift */; };
+		2B32540F29B216A7002DC5B9 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B32540E29B216A7002DC5B9 /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2B173494298E6F6D0032F441 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		2B173496298E6F6D0032F441 /* CommentCardWriterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2B1734A4298E71770032F441 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2B32540E29B216A7002DC5B9 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				2B17347B298E6F6C0032F441 /* ContentView.swift */,
 				2B17347D298E6F6D0032F441 /* Assets.xcassets */,
 				2B17347F298E6F6D0032F441 /* Preview Content */,
+				2B32540E29B216A7002DC5B9 /* CommentView.swift */,
 			);
 			path = CommentCardWriter;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				2B17347C298E6F6C0032F441 /* ContentView.swift in Sources */,
 				2B1734A5298E71770032F441 /* Comment.swift in Sources */,
+				2B32540F29B216A7002DC5B9 /* CommentView.swift in Sources */,
 				2B17347A298E6F6C0032F441 /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

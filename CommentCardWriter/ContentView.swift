@@ -8,94 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var comment: Comment
-    @State private var subjectPreference = 5.0
-    @State private var teacherPreference = 5.0
-    @State private var subject = ""
-    @State private var teacher = ""
-    @State private var editing = false
+    
+    @State private var commentList: [Comment] = []
     
     var body: some View {
-        
-        VStack(alignment: .center, spacing: 20) {
-            if editing {
-                VStack {
-                    Image(systemName: "pencil.circle.fill")
-                    Text("Editing...")
-                }
-            } else {
-                VStack {
-                    Image(systemName: "checkmark.seal.fill")
-                    Text("Saved!")
-                }
-            }
-            HStack {
-                Text("Subject: ")
-                TextField(
-                    "Enter subject here...",
-                    text: $subject,
-                    onEditingChanged:{ _ in
-                        editing.toggle()
-                        comment.subject = subject
-                        comment.generatePreferenceComment()
-                    }
-                )
-                    .border(.secondary)
+        ScrollView(.vertical) {
+            Spacer()
+            ForEach(0..<commentList.count, id: \.self) {
+                CommentView()
+                    .environmentObject(commentList[$0])
+                Divider()
             }
             
-            HStack {
-                Text("Teacher: ")
-                TextField(
-                    "Enter teacher here...",
-                    text: $teacher,
-                    onEditingChanged:{ _ in
-                        editing.toggle()
-                        comment.teacher = teacher
-                        comment.generatePreferenceComment()
-                    }
-                )
-                    .border(.secondary)
-            }
-            
-            HStack {
-                Text("Subject Preference: ")
-                Slider(
-                    value: $subjectPreference,
-                    in: 0...10,
-                    onEditingChanged: { _ in
-                        editing.toggle()
-                        comment.subjectPreference = subjectPreference
-                        comment.generatePreferenceComment()
-                    }
-                )
-            }
-            
-            HStack {
-                Text("Teacher Preference: ")
-                Slider(
-                    value: $teacherPreference,
-                    in: 0...10,
-                    onEditingChanged: { _ in
-                        editing.toggle()
-                        comment.teacherPreference = teacherPreference
-                        comment.generatePreferenceComment()
-                    }
-                )
-            }
-            
-            TextField(
-                    "Create your comment!",
-                    text: $comment.text)
-                    .border(.primary)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-            
-            Divider()
-            
-            Button("Copy Comment", action: {
-                UIPasteboard.general.setValue(comment.text, forPasteboardType: "public.plain-text")
+            Button("Add Comment", action: {
+                commentList.append(Comment())
             })
-            
+            Spacer()
         }
     }
 }
@@ -103,6 +31,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Comment())
     }
 }
