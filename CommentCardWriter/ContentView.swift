@@ -23,6 +23,9 @@ struct ContentView: View {
             Button("Add Comment", action: {
                 commentList.append(Comment())
             })
+            Button("Delete Last Comment", action: {
+                commentList.popLast()
+            })
             Spacer()
         }
     }
